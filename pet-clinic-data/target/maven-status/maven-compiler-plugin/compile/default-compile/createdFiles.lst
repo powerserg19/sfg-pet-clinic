@@ -1,0 +1,8 @@
+guru/springframework/sfgpetclinic/model/Pet.class
+guru/springframework/sfgpetclinic/model/Owner.class
+guru/springframework/sfgpetclinic/model/PetType$PetTypeBuilder.class
+guru/springframework/sfgpetclinic/model/Vet.class
+guru/springframework/sfgpetclinic/model/PetType.class
+guru/springframework/sfgpetclinic/model/Owner$OwnerBuilder.class
+guru/springframework/sfgpetclinic/model/Person.class
+guru/springframework/sfgpetclinic/model/Vet$VetBuilder.class
