@@ -1,19 +1,18 @@
 package guru.springframework.sfgpetclinic.model;
 
+import lombok.*;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "specialites")
 public class Specialty extends  BaseEntity {
     @Column(name = "description")
     private String description;
-    public String getDescription(){
-       return this.description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }
