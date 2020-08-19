@@ -46,17 +46,21 @@ public class OwnerController {
         }
 
         // find owners by last name
+        System.out.println("owner name "  + owner.getLastName());
         List<Owner> results = ownerService.findAllByLastNameLike("%"+ owner.getLastName() + "%");
 
         if (results.isEmpty()) {
+            System.out.println("empty");
             // no owners found
             result.rejectValue("lastName", "notFound", "not found");
             return "owners/findOwners";
         } else if (results.size() == 1) {
+            System.out.println("1");
             // 1 owner found
             owner = results.get(0);
             return "redirect:/owners/" + owner.getId();
         } else {
+            System.out.println("many");
             // multiple owners found
             model.addAttribute("selections", results);
             return "owners/ownersList";
