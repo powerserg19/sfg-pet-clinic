@@ -36,7 +36,6 @@ public class     OwnerSDJpaService implements OwnerService {
 
     @Override
     public List<Owner> findAllByLastNameLike(String lastName) {
-        System.out.println("in jpa");
         return ownerRepository.findAllByLastNameLike(lastName);
     }
 

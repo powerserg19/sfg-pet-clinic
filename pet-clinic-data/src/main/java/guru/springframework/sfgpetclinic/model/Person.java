@@ -13,6 +13,7 @@ import javax.persistence.MappedSuperclass;
  */
 @Setter
 @Getter
+
 @AllArgsConstructor
 @NoArgsConstructor
 @MappedSuperclass
