@@ -11,9 +11,8 @@ import javax.persistence.MappedSuperclass;
 /**
  * Created by jt on 7/13/18.
  */
-@Setter
 @Getter
-
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @MappedSuperclass
@@ -30,7 +29,5 @@ public class Person extends BaseEntity {
 
     @Column(name = "last_name")
     private String lastName;
-
-
 
 }
