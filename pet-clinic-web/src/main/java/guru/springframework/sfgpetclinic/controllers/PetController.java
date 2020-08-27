@@ -57,7 +57,7 @@ public class PetController {
             System.out.println("sergio initCreationForm" + owner.toString());
             Pet pet = new Pet();
             owner.getPets().add(pet);
-            //pet.setOwner(owner);
+            pet.setOwner(owner);
             model.addAttribute("pet", pet);
         }catch (Exception e)
         {
