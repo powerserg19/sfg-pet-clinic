@@ -53,22 +53,15 @@ public class PetController {
 
     @GetMapping("/pets/new")
     public String initCreationForm(Owner owner, Model model) {
-        try {
-            System.out.println("sergio initCreationForm" + owner.toString());
             Pet pet = new Pet();
             owner.getPets().add(pet);
             pet.setOwner(owner);
             model.addAttribute("pet", pet);
-        }catch (Exception e)
-        {
-            System.out.println("Oh snap exception"+ e);
-        }
         return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
     }
 
     @PostMapping("/pets/new")
     public String processCreationForm(Owner owner, @Valid Pet pet, BindingResult result, ModelMap model) {
-        System.out.println("sergio processCreationForm");
         if (StringUtils.hasLength(pet.getName()) && pet.isNew() && owner.getPet(pet.getName(), true) != null){
             result.rejectValue("name", "duplicate", "already exists");
         }

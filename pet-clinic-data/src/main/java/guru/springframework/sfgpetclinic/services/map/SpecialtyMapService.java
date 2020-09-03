@@ -11,6 +11,7 @@ import java.util.Set;
 public class SpecialtyMapService extends AbstractMapService<Specialty,Long> implements SpecialtyService {
     @Override
     public Set<Specialty> findAll() {
+        System.out.println("sergio special map service");
         return super.findAll();
     }
 
