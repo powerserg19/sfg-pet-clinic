@@ -50,14 +50,15 @@ class OwnerControllerTest {
 
     @Test
     void findOwners() throws Exception {
-           mockMvc.perform(get("/owners/find"))
+        mockMvc.perform(get("/owners/find"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("owners/findOwners"))
                 .andExpect(model().attributeExists("owner"));
 
-        //verifyZeroInteractions(ownerService);
+        verifyZeroInteractions(ownerService);
     }
-   @Test
+
+    @Test
     void processFindFormReturnMany() throws Exception {
         when(ownerService.findAllByLastNameLike(anyString()))
                 .thenReturn(Arrays.asList(Owner.builder().id(1l).build(),
